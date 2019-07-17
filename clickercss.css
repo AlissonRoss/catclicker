@@ -1,0 +1,128 @@
+body{
+  overflow: hidden;
+  background:repeating-linear-gradient(pink,white 10%);
+}
+
+main {
+  display: block;
+  font-family: Lucida Console;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: #ffb3ff;
+}
+
+#UI {
+  height: 200px;
+}
+
+#shop {
+  position: relative;
+  padding: 10px;
+  z-index: 1;
+  text-align: center;
+}
+
+#kittenDisplay {
+  margin: 0px;
+  text-align: center;
+}
+
+#mama {
+  background: Transparent url("cat0.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 150px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  border: none;
+  outline: none; /* prevent square outline when tapped */
+
+}
+.left-right-animate{
+  position: relative;
+
+  animation: 10s linear infinite leftRight;
+}
+.centerImg{
+  text-align: center;
+}
+@keyframes leftRight {
+  0% {
+    left: calc(50% - 100px);
+    transform: scaleX(-1);
+  }
+
+  23% {
+    left: calc(100% - 200px);
+    transform: scaleX(-1);
+  }
+
+  27% {
+    left: calc(100% - 200px);
+    transform: scaleX(1);
+  }
+
+  50% {
+    left: calc(50% - 100px);
+    transform: scaleX(1);
+  }
+
+  73% {
+    left: 0px;
+    transform: scaleX(1);
+  }
+
+  77% {
+    left: 0px;
+    transform: scaleX(-1);
+  }
+
+  100% {
+    left: calc(50% - 100px);
+    transform: scaleX(-1);
+  }
+}
+
+#catDIV{
+  width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer {
+  position: fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+	font-size: .80em;
+	text-align: center;
+	margin-top: 2em;
+}
+
+
+.catGIF {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  animation: mymove 4s;
+  z-index: 0;
+}
+@keyframes mymove {
+  0% {
+    top: -45px;
+    transform: rotateY(-10.0turn);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    top: 200vh;
+  }
+
+}
